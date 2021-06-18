@@ -1,316 +1,536 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap");
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* border: 1px solid black; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid black; */
 }
+
 :root {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
 }
-/* body, header, footer, section {
-    width: 100vw;
-} */
+
 header {
-    display: flex;
-    justify-content: space-between;
-    height: 60px;
-    padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 5%;
 }
+
 h1 {
-    font-weight: 400;
+  font-weight: 400;
 }
+
 h2 {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 3rem;
-    font-weight: 300;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
 }
+
 h3 {
-    color: #060A24;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1.5rem;
-    font-style: bold;
-    text-align: center;
-    padding: 3%;
+  color: #060a24;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.5rem;
+  font-style: bold;
+  text-align: center;
+  padding: 3%;
 }
+
 h4 {
-    color: #060A24;
-    font-size: 1rem;
+  color: #060a24;
+  font-size: 1rem;
 }
+
 p {
-    color: #060A24;
-    font-size: 1rem;
-    text-align: left;
+  color: #060a24;
+  font-size: 1rem;
+  text-align: left;
 }
+
 button {
-    background-color: #00F3BB;
-    color: #060A24;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1.125rem;
-    border: none;
+  background-color: #00f3bb;
+  color: #060a24;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.125rem;
+  border: none;
 }
+
 a {
-    text-decoration: none;
-    color:#060A24;
+  text-decoration: none;
+  color: #060a24;
 }
+
 a:hover {
-    color: #00F3BB;
-    text-decoration: line-through;
+  color: #00f3bb;
+  text-decoration: line-through;
 }
+
 a:active {
-    color:#060A24;
-    text-decoration: line-through;
-    opacity: 56%;
+  color: #060a24;
+  text-decoration: line-through;
+  opacity: 56%;
 }
+
 footer {
-    padding: 3%;
-    display: flex;
-    justify-content: space-between;
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
 }
-/* HEADER*/
-/* Logo style properties */
+
 .logo {
-    width: 36px;
+  width: 36px;
 }
-/* Menu style properties */
+
 .menu {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-/* Menu tabs style properties when each one is normal */
-.episodes, .about-us, .interviews, .topics {
-    color: #060A24;
-    display: inline-block;
-    font-size: 1rem;
-    line-height: 28px;
-    width: 120px;
-    height: 28px;
-    text-align: center;
+
+.episodes,
+.about-us,
+.interviews,
+.topics {
+  color: #060a24;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 28px;
+  width: 120px;
+  height: 28px;
+  text-align: center;
 }
-/* WELCOME SECTION */
+
+.responsive-menu {
+  display: none;
+}
+
+.line {
+  background-color: #000;
+  border-radius: 6px;
+  height: 3px;
+  margin-bottom: 30%;
+  width: 160%;
+  transition: all 1s ease;
+  transform-origin: left;
+}
+
+#burger:checked + label .top-line {
+  transform: rotate(45deg);
+}
+
+#burger:checked + label .med-line {
+  background-color: white;
+  border: none;
+}
+
+#burger:checked + label .low-line {
+  transform: rotate(-45deg);
+}
+
+.menu-slider {
+  width: 100vw;
+  background-color: blue;
+  margin-top: 5%;
+  position: fixed;
+  left: 0;
+  transform: translateX(100vw);
+}
+
+#burger:checked ~ .menu-slider {
+  transform: translateX(0);
+}
+
 .welcome-section-title {
-    display: flex;
-    padding-left: 15%;
-    padding-top: 10%;
+  display: flex;
+  padding-left: 15%;
+  padding-top: 10%;
 }
-/* General style properties for each one words */
+
 .general {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 4rem;
-    color: #060A24;
-    letter-spacing: 0;
-    padding: 0px 8px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 3.3rem;
+  color: #060a24;
+  letter-spacing: 0;
 }
+
 .hello-text {
-    padding-left: 0;
+  padding-left: 0;
 }
-/* Style properties WORLD word */
+
 .world-text {
-    text-decoration: line-through;
+  text-decoration: line-through;
+  padding-right: 8px;
 }
-/* Style properties on the dot at the end */
+
 .dot-symbol {
-    color: blue;
+  color: blue;
 }
-/* Small paragraph about the website */
-.first-paragrah {
-    width: 60%;
-    padding-left: 15%;
+
+.first-paragraph-desktop {
+  width: 60%;
+  padding-left: 15%;
 }
-/* Button before text */
+
+.first-paragraph-mobile {
+  display: none;
+}
+
 .more-button {
-    width: 226px;
-    height: 56px;
-    margin-left: 15%;
-    margin-top: 3%;
+  width: 226px;
+  height: 56px;
+  margin-left: 15%;
+  margin-top: 3%;
 }
-/* "CONOCÉ MÁS" button style properties when has hover pseudoclass */
+
 button:hover {
-    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-    color: white;
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+  color: white;
 }
-/* EPISODES SECTION */
-/* Style properties on the "Episodios" title */
+
 .episodes-section {
-    height: 1042px;
-    border: 1px solid black ;
-    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-    clip-path: polygon(100% 0px, 100% 921.5px, 0px 1042px, 0px 120.5px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 1042px;
+  border: 1px solid black;
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  clip-path: polygon(100% 0px, 100% 921.5px, 0px 1042px, 0px 120.5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .episodes-title {
-    color: #FFFFFF;
-    padding-left: 15%;
+  color: #ffffff;
+  padding-left: 15%;
 }
-/* Style properties on the podcast container*/
-.podcast-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items:center;
+
+.iframe-container {
+  display: flex;
+  flex-direction: column;
 }
-/* Style properties on each item of the podcast list */
-.podcast-container.first-row {
-    margin: 50px 0;
+
+.first-row,
+.second-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
+
 .iframe {
-    border: 0px;
-    width: 584px;
-    height: 232px;
+  margin: 3%;
+  width: 100%;
 }
-/* WHERE DO WE COME SECTION */
+
+iframe {
+  border: 0px;
+  height: 232px;
+  width: 100%;
+}
+
 .whereDoWeCome-section {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 5%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 5%;
 }
+
 .container-whereDoWeCome {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
-/* Style properties on the phone image */
+
 .phone-image {
-    height: 660px;
-    position: relative;
-    bottom: 150px;
-    left: 80px;
-    z-index: 100;
+  height: 660px;
+  position: relative;
+  bottom: 150px;
+  left: 80px;
+  z-index: 100;
 }
-/* Style properties on the where do we come title */
+
 .where-do-we-come-title {
-    width: 80%;
-    color: #060A24;
-    padding-top: 10%;
+  width: 80%;
+  color: #060a24;
+  padding-top: 10%;
 }
-/* Style properties on the second paragraph */
-.second-paragraph, .thrid-paragraph {
-    width: 80%;
+
+.second-paragraph,
+.thrid-paragraph {
+  width: 80%;
 }
-/* GUESTS SECTION */
-/* Guests title */
+
 .guests-title {
-    padding-left: 15%;
-    padding-bottom: 3%;
+  padding-left: 15%;
+  padding-bottom: 3%;
 }
-.guests-list-row1, .guests-list-row2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.guests-list-row1,
+.guests-list-row2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* Style properties on each item of the guests list */
-.guest1, .guest2, .guest3, .guest4, .guest5, .guest6 {
-    width: 33.3%;
+
+.guest1,
+.guest2,
+.guest3,
+.guest4,
+.guest5,
+.guest6 {
+  width: 33.3%;
 }
-/* TOPICS SECTION */
+
 .ourTopics-title {
-    padding-left: 15%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-
+  padding-left: 15%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
-/* Style properties on the icons container*/
+
 .icons-list {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    padding: 0 10%;
-}
-/* Style properties on the icon box (icon+title) */
-.general-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: center;
-}
-/* Style properties on icons */
-.icon2, .icon4 {
-    width: 25%;
-}
-.icon1, .icon3 {
-    width: 40%;
-}
-/* TRENDIES SECTION */
-/* Style properties on the podcast container*/
-.trendies-section {
-    height: 518px;
-    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-    clip-path: polygon(0px 158px, 100% 0px, 100% 518px, 0px 518px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-}
-/* Style properties on the trendies title */
-.trendies-title {
-    color: #FFFFFF;
-    text-align: center;
-    margin-top: 100px;
-}
-/* Listen to episodes button */
-.listenTo-episodes {
-    width: 345px;
-    height: 56px;
-    margin-top: 5%;
-}
-/* FOOTER STYLE */
-.icon-menu-items {
-    display: flex;
-}
-/* li tag */
-.icons-menu {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-}
-.icons {
-    padding: 0 15%;
-}
-/* Media query para tablet 426px-768px */
-@media screen and (max-width: 426px) {
-    :root {
-        font-size: 12px;
-    }
-  .menu {
-      display: none;
-  }  
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  padding: 0 10%;
 }
 
-/* Media query para mobile 425px o menos */
-/* @media screen and (max-width: 425px) {
-    :root {
-        font-size: 14px;
-    }
-  html {
-      width: 100vw;;
+.general-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.icon2,
+.icon4 {
+  width: 25%;
+}
+
+.icon1,
+.icon3 {
+  width: 40%;
+}
+
+.trendies-section {
+  height: 518px;
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  clip-path: polygon(0px 158px, 100% 0px, 100% 518px, 0px 518px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trendies-title {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.listenTo-episodes {
+  width: 345px;
+  height: 56px;
+  margin-top: 5%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon-menu-items {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.icons-menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.fab {
+  font-size: 2rem;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 426px) {
+  :root {
+    font-size: 12px;
   }
-    body {
-      width: 100vw;
-  }
-  h1 {
-      display: flex;
-      flex-direction:column;
-  }
-  p {
-      font-size: 1rem;
-  }
+
   .menu {
-      display: none;
+    display: none;
   }
-  .welcome-section {
-      width: 100vw;
+
+  .responsive-menu {
+    display: block;
   }
-  .first-paragrah {
-      width: 100%;
-      padding: 0 25px;
+
+  .custom-checkbox {
+    visibility: hidden;
   }
+
+  a {
+    color: #fff;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .episodes-responsive,
+  .about-us-responsive,
+  .interviews-responsive,
+  .topics-responsive {
+    color: white;
+    margin: 3%;
+  }
+
+  .welcome-section-title {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+  }
+
+  .hello-world,
+  .pale-blue-dot {
+    display: flex;
+    padding-left: 0%;
+  }
+
   .world-text {
-      padding-right: 30px;
-  }  
-} */
+    text-decoration: line-through;
+    padding-left: 5%;
+  }
+
+  .first-paragraph-desktop {
+    display: none;
+  }
+
+  .first-paragraph-mobile {
+    padding: 5%;
+    width: 100%;
+    display: block;
+  }
+
+  .more-button {
+    width: 95%;
+    height: 56px;
+    margin: 3%;
+  }
+
+  .episodes-section {
+    clip-path: polygon(100% 0px, 100% 1300.5px, 0px 1342px, 0px 30.5px);
+  }
+
+  .episodes-title {
+    color: #ffffff;
+    padding-left: 5%;
+  }
+
+  .first-row,
+  .second-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .iframe {
+    width: 90%;
+  }
+
+  .episodes-section {
+    height: 1342px;
+  }
+
+  .whereDoWeCome-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phone-image {
+    width: 100%;
+    height: 600px;
+    left: 0;
+    bottom: 100px;
+  }
+
+  .where-do-we-come-title {
+    width: 100%;
+    padding-top: 0;
+    padding: 0 5%;
+    padding-right: 30%;
+  }
+
+  .whereDoWeCome-section {
+    padding: 0;
+  }
+
+  .second-paragraph,
+  .thrid-paragraph {
+    width: 90%;
+    padding: 0;
+  }
+
+  .guests-title {
+    padding-left: 5%;
+    padding-top: 20%;
+    padding-right: 20%;
+  }
+
+  .guests-list-row1,
+  .guests-list-row2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guest1,
+  .guest2,
+  .guest3,
+  .guest4,
+  .guest5,
+  .guest6 {
+    width: 100%;
+  }
+
+  .ourTopics-title {
+    padding: 5%;
+    padding-right: 20%;
+  }
+
+  .icons-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .general-icon {
+    width: 80%;
+    margin: 5%;
+  }
+
+  .trendies-section {
+    clip-path: polygon(0px 48px, 100% 0px, 100% 518px, 0px 518px);
+  }
+
+  .footer-container {
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-menu-items {
+    width: 55%;
+    margin-top: 5%;
+  }
+}
