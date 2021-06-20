@@ -378,14 +378,11 @@ i:hover {
     visibility: hidden;
   }
 
-  a {
-    color: #fff;
-  }
-
+  
   li {
     list-style: none;
   }
-
+  
   .episodes-responsive,
   .about-us-responsive,
   .interviews-responsive,
@@ -393,105 +390,105 @@ i:hover {
     color: white;
     margin: 3%;
   }
-
+  
   .welcome-section-title {
     display: flex;
     flex-direction: column;
     padding-left: 5%;
   }
-
+  
   .hello-world,
   .pale-blue-dot {
     display: flex;
     padding-left: 0%;
   }
-
+  
   .world-text {
     text-decoration: line-through;
     padding-left: 5%;
   }
-
+  
   .first-paragraph-desktop {
     display: none;
   }
-
+  
   .first-paragraph-mobile {
     padding: 5%;
     width: 100%;
     display: block;
   }
-
+  
   .more-button {
     width: 95%;
     height: 56px;
     margin: 3%;
   }
-
+  
   .episodes-section {
     clip-path: polygon(100% 0px, 100% 1300.5px, 0px 1342px, 0px 30.5px);
   }
-
+  
   .episodes-title {
     color: #ffffff;
     padding-left: 5%;
   }
-
+  
   .first-row,
   .second-row {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
+  
   .iframe {
     width: 90%;
   }
-
+  
   .episodes-section {
     height: 1342px;
   }
-
+  
   .whereDoWeCome-section {
     display: flex;
     flex-direction: column;
   }
-
+  
   .phone-image {
     width: 100%;
     height: 600px;
     left: 0;
     bottom: 100px;
   }
-
+  
   .where-do-we-come-title {
     width: 100%;
     padding-top: 0;
     padding: 0 5%;
     padding-right: 30%;
   }
-
+  
   .whereDoWeCome-section {
     padding: 0;
   }
-
+  
   .second-paragraph,
   .thrid-paragraph {
     width: 90%;
     padding: 0;
   }
-
+  
   .guests-title {
     padding-left: 5%;
     padding-top: 20%;
     padding-right: 20%;
   }
-
+  
   .guests-list-row1,
   .guests-list-row2 {
     display: flex;
     flex-direction: column;
   }
-
+  
   .guest1,
   .guest2,
   .guest3,
@@ -500,27 +497,27 @@ i:hover {
   .guest6 {
     width: 100%;
   }
-
+  
   .ourTopics-title {
     padding: 5%;
     padding-right: 20%;
   }
-
+  
   .icons-list {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
+  
   .general-icon {
     width: 80%;
     margin: 5%;
   }
-
+  
   .trendies-section {
     clip-path: polygon(0px 48px, 100% 0px, 100% 518px, 0px 518px);
   }
-
+  
   .footer-container {
     margin: 5% 0;
     display: flex;
@@ -528,9 +525,15 @@ i:hover {
     align-items: center;
     justify-content: center;
   }
-
+  
   .icon-menu-items {
     width: 55%;
     margin-top: 5%;
+  }
+  a {
+    color: #FFF;
+  }
+  .fab {
+    color: #000;
   }
 }
